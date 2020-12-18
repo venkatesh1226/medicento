@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "946186141388",
+    "firebase_url": "https://medical-454cd-default-rtdb.firebaseio.com",
+    "project_id": "medical-454cd",
+    "storage_bucket": "medical-454cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946186141388:android:7c63c75277c81933d08c69",
+        "android_client_info": {
+          "package_name": "com.example.basic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946186141388-cjmjut9dji7rsgbg9rmp1rd04t020fm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfWirLmqU-YW3XsdsaEDl9bRzLjKltwXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946186141388-cjmjut9dji7rsgbg9rmp1rd04t020fm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
