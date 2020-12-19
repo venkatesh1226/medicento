@@ -48,6 +48,10 @@ public class SignUp extends AppCompatActivity {
                 String email = etEmail.getText().toString().trim();
                 String password = etPassword.getText().toString().trim();
                 String confirm = etConfirm.getText().toString().trim();
+                if(!password.equals(confirm)){
+                    etConfirm.setError("Password doesnt Match");
+                    return;
+                }
                 if(TextUtils.isEmpty(email)){
                     etEmail.setError("Email is required");
                     return;
