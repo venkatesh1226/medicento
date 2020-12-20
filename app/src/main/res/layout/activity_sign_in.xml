@@ -7,6 +7,7 @@
     tools:context=".SignIn">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
@@ -16,6 +17,7 @@
         android:textSize="40dp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
@@ -31,13 +33,25 @@
         />
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="252dp"
+        android:src="@drawable/ic_covid"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-100dp"
-        tools:layout_editor_absoluteY="34dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="39dp">
 
         <EditText
             android:id="@+id/etEmail"
@@ -48,8 +62,7 @@
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="15dp"
-            android:textColorHint="@color/cardview_dark_background"
-            />
+            android:textColorHint="@color/cardview_dark_background" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -64,12 +77,12 @@
             android:textColorHint="@color/cardview_dark_background" />
 
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/buSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -77,11 +90,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/cardview_dark_background"
                 android:text="SignIn"
-                android:id="@+id/buSignIn"
-                android:textStyle="bold"
                 android:textColor="@color/cardview_light_background"
-                android:backgroundTint="@color/cardview_dark_background"/>
+                android:textStyle="bold" />
 
             />
 
@@ -118,7 +130,6 @@
                 android:textStyle="bold" />
 
 
-
             <Button
                 android:id="@+id/buSignUpAction"
                 android:layout_width="wrap_content"
@@ -127,13 +138,13 @@
                 android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@+id/existing"
                 android:backgroundTint="@color/cardview_dark_background"
+                android:onClick="SignUpAction"
                 android:shadowRadius="5"
                 android:text="Sign Up"
                 android:textColor="@color/cardview_light_background"
-                android:textColorHighlight="#C60101"
 
-                android:textStyle="bold"
-                android:onClick="SignUpAction"/>
+                android:textColorHighlight="#C60101"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>
