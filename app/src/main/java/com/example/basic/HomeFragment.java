@@ -1,5 +1,6 @@
 package com.example.basic;
 
+import android.app.DownloadManager;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,7 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.google.gson.JsonArray;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class HomeFragment extends Fragment {
+    TextView no_cases,activeCases,no_deaths,recover;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +36,6 @@ public class HomeFragment extends Fragment {
     }
     private void init(View v){
 //        Here you Can Change Views
-        TextView txt=v.findViewById(R.id.text_view);
+
     }
 }
