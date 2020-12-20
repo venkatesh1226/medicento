@@ -7,9 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,11 +23,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.ArrayList;
+
 public class SignUp extends AppCompatActivity {
     EditText etEmail,etPassword,etConfirm;
     ProgressBar progressBar;
     FirebaseAuth fAuth;
     Button buRegister,buSignInAction;
+    private Spinner spinnerUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +84,18 @@ public class SignUp extends AppCompatActivity {
 
             }
         });
+        spinnerUser = findViewById(R.id.dropdownuser);
+
+        ArrayList<String> user = new ArrayList<>();
+        user.add("User");
+        user.add("Hospital");
+
+        ArrayAdapter<String> userAdapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_list_item_1,
+                user
+        );
+        spinnerUser.setAdapter(userAdapter);
     }
 
 

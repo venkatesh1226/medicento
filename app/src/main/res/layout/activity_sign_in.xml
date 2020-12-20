@@ -33,17 +33,6 @@
         />
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:layout_marginBottom="252dp"
-        android:src="@drawable/ic_covid"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
