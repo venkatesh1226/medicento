@@ -3,15 +3,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment">
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_200">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment"
-        android:textSize="50dp"/>
-    </RelativeLayout>
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="75dp"
+            app:cardPreventCornerOverlap="false"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ivPf"
+                android:scaleType="center"
+                android:clickable="true"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etName"
+            android:hint="name"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:paddingStart="10dp"
+            android:drawablePadding="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etAddress"
+            android:hint="Address"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:paddingLeft="10dp"
+            android:drawablePadding="5dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEmail"
+            android:hint="Email"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:paddingLeft="10dp"
+            android:drawablePadding="5dp"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:backgroundTint="@color/black"
+            android:id="@+id/save"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+
+            />
+
+    </LinearLayout>
+
 </FrameLayout>
