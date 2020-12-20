@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment=new ShopFragment();
                         break;
                     case R.id.profile:
-                        selectedFragment=new ProfileFragment();
+                        selectedFragment=new ProfileInfoFragment();
                         break;
                 }
                 getSupportFragmentManager()
